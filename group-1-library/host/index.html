@@ -6,6 +6,8 @@
   <title>Library seat finder</title>
   <style>:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1d3029;background:#f6f8f5}*{box-sizing:border-box}body{margin:0}header{background:#fff;border-bottom:1px solid #dce5dc}.header-inner{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}.header-inner strong{font-size:18px}.header-inner span{color:#586a60;font-size:13px}main{max-width:1200px;padding:52px 24px;margin:auto}.intro{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:48px}h1,h2,h3,p{margin:0}h1{font-size:clamp(34px,4vw,48px);letter-spacing:-.04em}h2{font-size:21px;letter-spacing:-.02em}h3{font-size:17px}.intro p,.section-heading p{color:#586a60;line-height:1.5;margin-top:8px}.summary{background:#e3f1e6;border:1px solid #b9d9c0;border-radius:12px;padding:16px 22px;display:flex;align-items:center;gap:14px;color:#215b35;min-width:210px}.summary strong{font-size:40px;line-height:1}.summary span{font-weight:700}.summary small{font-size:12px;font-weight:500;display:block;margin-top:3px}.key-section{margin-bottom:50px}.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.legend>div{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid #dce5dc;border-radius:9px;padding:14px}.legend p{font-size:14px}.legend small{display:block;color:#586a60;line-height:1.35;font-size:12px;margin-top:4px}.symbol{width:26px;height:26px;flex:none;border-radius:6px;display:grid;place-items:center;font-weight:800}.free,.available{background:#e4f4e7;color:#205c32;border:1px solid #9acaa3}.busy,.occupied{background:#fbebea;color:#973b33;border:1px solid #e5b2ac}.unknown{background:#ecefed;color:#495b51;border:1px solid #bdc9c1}.none,.unmonitored{background:#fff;color:#53645a;border:1px dashed #809388}.section-heading{margin-bottom:16px}.section-heading p{font-size:14px}.tables{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.table-card{cursor:pointer;transition:box-shadow .15s,transform .15s}.table-card:hover{border:1px dashed #688e76;box-shadow:0 5px 18px #14251e18;transform:translateY(-2px)}.table-card:focus-visible{outline:3px solid #246b43;outline-offset:3px}.table-card{background:#fff;border:1px solid #dce5dc;border-radius:12px;padding:22px;min-width:0}.card-heading p{color:#62746a;font-size:13px;margin-top:5px}.diagram{height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.desk{background:#eee9dc;color:#665d4d;border:1px solid #dbd2bf;width:132px;height:68px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:700;flex:none}.two .desk{margin-top:32px}.seats,.middle{display:flex;gap:8px;justify-content:center;align-items:center}.seat{font:inherit;cursor:default;border-radius:7px}.seat:hover{box-shadow:none}.seat:focus-visible,button:focus-visible{outline:3px solid #246b43;outline-offset:3px}.two .seat{width:110px;text-align:left;padding:8px}.seat-id,.seat-status{display:block}.seat-id{font-size:13px;font-weight:700}.seat-status{font-size:11px;font-weight:700;margin-top:4px}.unmonitored{width:58px;height:36px;font-size:11px;font-weight:700}.middle .unmonitored{width:48px}.middle .desk{width:120px}.table-card{position:relative}.table-card .desk{cursor:default;box-shadow:none;transition:none}.table-card .desk:hover{box-shadow:none;transform:none}.table-card .seat{position:relative;z-index:1;min-height:48px;display:inline-flex;flex-direction:column;justify-content:center}.table-card .unmonitored{min-width:68px;min-height:42px;display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:0}.card-foot{border-top:1px solid #e7ede8;padding-top:14px;font-size:12px;color:#5d6d64}.footnote{color:#62746a;font-size:13px;margin-top:24px}dialog{width:min(440px,calc(100% - 32px));border:0;border-radius:14px;padding:28px;color:#1d3029;box-shadow:0 20px 60px #14251e40}dialog::backdrop{background:#17282080}.modal-top{display:flex;justify-content:space-between;align-items:center;color:#597364;font-size:11px;font-weight:800;letter-spacing:.1em}.close-icon{border:0;background:#f0f4f0;border-radius:50%;width:32px;height:32px;font-size:22px;cursor:pointer}dialog h2{font-size:27px;margin-top:12px}.modal-location{color:#62746a;font-size:14px;margin-top:6px}.status-panel{margin-top:24px;border-radius:8px;padding:14px;font-weight:700}.status-panel.unmonitored{width:auto;height:auto;font-size:15px}.modal-description{font-size:14px;line-height:1.6;color:#53645a;margin:18px 0 24px}.close-button{width:100%;padding:13px;border:0;border-radius:8px;background:#27573a;color:#fff;font:inherit;font-weight:700;cursor:pointer}@media(max-width:900px){.legend{grid-template-columns:repeat(2,1fr)}.tables{grid-template-columns:1fr}.diagram{height:190px}}@media(max-width:520px){main{padding:36px 18px}.intro{align-items:flex-start;flex-direction:column}.legend{grid-template-columns:1fr}.key-section{margin-bottom:40px}}
 .seat-features{border-top:1px solid #e3eae4;padding-top:18px}.seat-features h3{font-size:15px}.seat-features p{font-size:14px;line-height:1.5;color:#53645a;margin-top:8px}.seat-features ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:15px 0 0;padding:0}.seat-features li{display:flex;align-items:center;gap:7px;background:#f1f5f1;border-radius:7px;padding:8px 10px;color:#345542;font-size:13px;font-weight:600}.seat-features svg{width:17px;height:17px;flex:none}.example-note{font-size:12px;color:#62746a;margin:18px 0}dialog{max-height:calc(100vh - 32px);overflow:auto}
+
+.modal-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.modal-eyebrow{font-size:11px;letter-spacing:.1em;font-weight:800;color:#597364}.modal-heading h2{margin-top:8px}.modal-heading .close-icon{flex:none;display:grid;place-items:center}.close-icon svg{width:19px;height:19px}.modal-section{margin-top:24px}.modal-section h3{font-size:15px;margin-bottom:12px}.availability-list{border:1px solid #dce5dc;border-radius:9px;overflow:hidden}.availability-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;font-size:14px;font-weight:600}.availability-row+.availability-row{border-top:1px solid #e7ede8}.availability-badge{border-radius:6px;padding:5px 8px;font-size:12px;white-space:nowrap}.availability-note{padding:13px;color:#53645a;font-size:14px}.feature-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}.feature-list li{display:flex;align-items:center;gap:7px;background:#f1f5f1;border-radius:7px;padding:8px 10px;color:#345542;font-size:13px;font-weight:600}.feature-list svg{width:17px;height:17px;flex:none}.example-note{line-height:1.4}.close-button{margin-top:4px}
 </style>
   
 </head>
@@ -23,83 +25,57 @@
     </section>
     <p class="footnote">Availability is an estimate and can change before you arrive.</p>
   </main>
-  <dialog id="details" aria-labelledby="dialog-title"><div class="modal-top"><span>TABLE DETAILS</span><button class="close-icon" id="close-icon" aria-label="Close seat details">×</button></div><h2 id="dialog-title"></h2><p class="modal-location" id="dialog-location"></p><div class="status-panel" id="dialog-status"></div><p class="modal-description" id="dialog-description"></p><div class="seat-features"><h3>About this table</h3><p id="seat-description"></p><ul id="seat-features"></ul></div><p class="example-note">Table features are examples for this prototype.</p><button class="close-button" id="close-button">Close</button></dialog>
+  <dialog id="details" aria-labelledby="dialog-title">
+    <div class="modal-heading"><div><p class="modal-eyebrow">TABLE DETAILS</p><h2 id="dialog-title"></h2><p class="modal-location" id="dialog-location"></p></div><button class="close-icon" id="close-icon" aria-label="Close table details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-section"><h3>Seat availability</h3><div id="dialog-status" class="availability-list"></div></div>
+    <div class="modal-section"><h3>Table features</h3><ul id="table-features" class="feature-list"></ul><p class="example-note">Features are examples and need to be confirmed.</p></div>
+    <button class="close-button" id="close-button">Close</button>
+  </dialog>
 <script>
 // Example readings and fictional seat details; replace with your real library data.
 const readings = { L1: 'unknown', L2: 'unknown' };
 let selectedTable = null;
 const labels = { available: 'Available', occupied: 'Occupied', unknown: 'Unknown', unmonitored: 'Not monitored' };
-const seatDetails = {
-  L1: { description: 'A quiet spot beside the window for focused reading.', features: ['Window seat', 'Power socket', 'Quiet area'] },
-  L2: { description: 'A sheltered corner seat with space to work independently.', features: ['Corner seat', 'Power socket', 'Quiet area'] },
-  'T2-1': { description: 'A seat near the entrance, convenient for a short study session.', features: ['Near entrance', 'Power socket'] },
-  'T2-2': { description: 'A shared table seat with a monitor for connecting your laptop.', features: ['External monitor', 'Power socket'] },
-  'T2-3': { description: 'A seat facing the window at a shared study table.', features: ['Window seat', 'Shared table'] },
-  'T2-4': { description: 'A shared table seat close to a power socket.', features: ['Power socket', 'Shared table'] },
-  'T3-1': { description: 'A group table seat with a monitor for working together.', features: ['External monitor', 'Group study'] },
-  'T3-2': { description: 'A group table seat near a power socket.', features: ['Power socket', 'Group study'] },
-  'T3-3': { description: 'A bright group-study seat next to the window.', features: ['Window seat', 'Group study'] },
-  'T3-4': { description: 'A group table seat with room for a laptop and notes.', features: ['Group study', 'Shared table'] },
-  'T3-5': { description: 'A corner-side seat at the end of the group table.', features: ['Corner seat', 'Group study'] },
-  'T3-6': { description: 'An end seat near the entrance, easy to get in and out of.', features: ['Near entrance', 'Group study'] }
-};
 // Inline Lucide icons (ISC licence): https://lucide.dev
 const icons = {
-  'Window seat': '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/>',
-  'Power socket': '<path d="M12 22v-5M9 8V2M15 8V2M7 8h10v4a5 5 0 0 1-10 0z"/>',
+  'Window seats': '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/>',
+  'Power sockets': '<path d="M12 22v-5M9 8V2M15 8V2M7 8h10v4a5 5 0 0 1-10 0z"/>',
   'Quiet area': '<path d="M11 5 6 9H2v6h4l5 4V5zM16 9l4 4m0-4-4 4"/>',
-  'Corner seat': '<path d="M5 4v15h15"/><path d="M9 15h6v-6"/>',
-  'Near entrance': '<path d="M13 4h6v16h-6M3 12h12m-4-4 4 4-4 4"/>',
-  'External monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>',
   'Shared table': '<path d="M3 10h18M5 10v10m14-10v10M5 6h14l2 4H3z"/>',
   'Group study': '<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="10" cy="7" r="4"/>'
+};
+const tables = {
+  1: { location: 'Quiet reading', features: ['Window seats', 'Power sockets', 'Quiet area'] },
+  2: { location: 'Shared study', features: ['Shared table', 'Power sockets'] },
+  3: { location: 'Group study', features: ['Group study', 'Shared table'] }
 };
 const dialog = document.querySelector('#details');
 const statusPanel = document.querySelector('#dialog-status');
 const seats = document.querySelectorAll('[data-seat]');
-const tableDescriptions = { 1: 'A quiet reading table with two pressure-sensor seats. Seat L1 and L2 open individual details.', 2: 'A shared study table with four seats. Seat availability is not monitored.', 3: 'A group study table with six seats. Seat availability is not monitored.' };
-document.querySelectorAll('.table-card').forEach(button => {
-  button.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); button.click(); } });
-  button.addEventListener('click', () => {
-  const id = button.dataset.table;
-  selectedTable = id;
+function renderTable(id) {
+  const table = tables[id];
   document.querySelector('#dialog-title').textContent = `Table ${id}`;
-  document.querySelector('#dialog-location').textContent = `${id === '1' ? 'Quiet reading' : id === '2' ? 'Shared study' : 'Group study'} · Table details`;
-  statusPanel.className = 'status-panel unmonitored';
-  statusPanel.textContent = id === '1' ? '2 seats monitored' : 'Seat availability not monitored';
-  document.querySelector('#dialog-description').textContent = tableDescriptions[id];
-  document.querySelector('#seat-description').textContent = tableDescriptions[id];
-  document.querySelector('#seat-features').replaceChildren(...(id === '1' ? ['Window seats', 'Power sockets', 'Quiet area'] : id === '2' ? ['Shared table', 'Power sockets'] : ['Group study', 'Shared table']).map(feature => { const li=document.createElement('li'); li.textContent=feature; return li; }));
-  dialog.showModal();
-  });
-});
-function updateSeats() {
-  let available = 0;
-  seats.forEach(button => {
-    const id = button.dataset.seat;
-    const monitored = id in readings;
-    const status = monitored && ['available', 'occupied', 'unknown'].includes(readings[id]) ? readings[id] : monitored ? 'unknown' : 'unmonitored';
-    button.setAttribute('aria-label', `Seat ${id}, ${labels[status]}. View details.`);
-    if (!monitored) return;
-    if (status === 'available') available++;
-    button.className = `seat ${status}`;
-    button.querySelector('.seat-status').textContent = `${status === 'available' ? '✓' : status === 'occupied' ? '×' : '?'} ${labels[status]}`;
-  });
-  document.querySelector('#available-count').textContent = available;
-}
-function renderDetails(id) {
-  const monitored = id in readings;
-  const status = monitored && ['available', 'occupied', 'unknown'].includes(readings[id]) ? readings[id] : monitored ? 'unknown' : 'unmonitored';
-  const table = monitored ? 'Table 1' : `Table ${id.charAt(1)}`;
-  document.querySelector('#dialog-title').textContent = `Seat ${id}`;
-  document.querySelector('#dialog-location').textContent = table;
-  statusPanel.className = `status-panel ${status}`;
-  statusPanel.textContent = `${status === 'available' ? '✓' : status === 'occupied' ? '×' : status === 'unknown' ? '?' : '—'}  ${labels[status]}`;
-  document.querySelector('#dialog-description').textContent = monitored ? (status === 'unknown' ? 'No recent sensor reading is available for this seat.' : 'Based on the latest pressure sensor reading.') : 'This seat has no sensor, so its availability is not known.';
-  const details = seatDetails[id];
-  document.querySelector('#seat-description').textContent = details.description;
-  const list = document.querySelector('#seat-features');
-  list.replaceChildren(...details.features.map(feature => {
+  document.querySelector('#dialog-location').textContent = table.location;
+  statusPanel.replaceChildren();
+  if (id === '1') {
+    for (const seat of ['L1', 'L2']) {
+      const row = document.createElement('div');
+      row.className = 'availability-row';
+      const name = document.createElement('span');
+      name.textContent = `Seat ${seat}`;
+      const state = document.createElement('span');
+      state.className = `availability-badge ${readings[seat]}`;
+      state.textContent = `${readings[seat] === 'available' ? '✓' : readings[seat] === 'occupied' ? '×' : '?'} ${labels[readings[seat]]}`;
+      row.append(name, state);
+      statusPanel.append(row);
+    }
+  } else {
+    const message = document.createElement('p');
+    message.className = 'availability-note';
+    message.textContent = 'Seat availability is not monitored.';
+    statusPanel.append(message);
+  }
+  document.querySelector('#table-features').replaceChildren(...table.features.map(feature => {
     const item = document.createElement('li');
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     icon.setAttribute('viewBox', '0 0 24 24');
@@ -114,8 +90,28 @@ function renderDetails(id) {
     return item;
   }));
 }
-// Seat labels are informational; selecting anywhere on a card opens its table details.
-
+document.querySelectorAll('.table-card').forEach(card => {
+  card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); card.click(); } });
+  card.addEventListener('click', () => {
+    selectedTable = card.dataset.table;
+    renderTable(selectedTable);
+    dialog.showModal();
+  });
+});
+function updateSeats() {
+  let available = 0;
+  seats.forEach(button => {
+    const id = button.dataset.seat;
+    const monitored = id in readings;
+    const status = monitored && ['available', 'occupied', 'unknown'].includes(readings[id]) ? readings[id] : monitored ? 'unknown' : 'unmonitored';
+    button.setAttribute('aria-label', `Seat ${id}, ${labels[status]}.`);
+    if (!monitored) return;
+    if (status === 'available') available++;
+    button.className = `seat ${status}`;
+    button.querySelector('.seat-status').textContent = `${status === 'available' ? '✓' : status === 'occupied' ? '×' : '?'} ${labels[status]}`;
+  });
+  document.querySelector('#available-count').textContent = available;
+}
 document.querySelector('#close-icon').addEventListener('click', () => dialog.close());
 document.querySelector('#close-button').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
@@ -136,7 +132,7 @@ async function refresh() {
     document.querySelector('#network').textContent = 'Host unavailable · Check connection';
   }
   updateSeats();
-  
+  if (dialog.open && selectedTable) renderTable(selectedTable);
   setTimeout(refresh, 1000);
 }
 refresh();
