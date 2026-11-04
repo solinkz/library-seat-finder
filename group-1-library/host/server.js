@@ -76,8 +76,15 @@ async function handleRequest(request, response) {
   // GET asks for information. These two routes serve the browser.
   if (request.method === 'GET' && endpoint === '/') {
     response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
-    response.end(fs.readFileSync(path.join(__dirname, 'index.html')));
+    const page = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+    const reload = `<script>(function(){let version='';async function check(){try{const r=await fetch('/api/version',{cache:'no-store'});const v=await r.text();if(version&&version!==v)location.reload();version=v}catch(e){}setTimeout(check,700) }check()})()</script>`;
+    response.end(page.replace('</body>', reload + '</body>'));
     return; // This request is finished.
+  }
+  if (request.method === 'GET' && endpoint === '/api/version') {
+    response.writeHead(200, { 'Content-Type': 'text/plain', 'Cache-Control': 'no-store' });
+    response.end(String(fs.statSync(path.join(__dirname, 'index.html')).mtimeMs));
+    return;
   }
   if (request.method === 'GET' && endpoint === '/api/state') {
     reply(response, 200, snapshot());
