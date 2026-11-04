@@ -136,10 +136,10 @@ const int CHAIR_1_PIN = A0;
 const int CHAIR_2_PIN = A1;
 
 // CHANGE THESE after measuring your mounted chairs. These are example values.
-const int CHAIR_1_ON = 550;
-const int CHAIR_1_OFF = 400;
-const int CHAIR_2_ON = 550;
-const int CHAIR_2_OFF = 400;
+const int CHAIR_1_ON = 350;
+const int CHAIR_1_OFF = 250;
+const int CHAIR_2_ON = 350;
+const int CHAIR_2_OFF = 250;
 
 int chair1Reading = 0;
 int chair2Reading = 0;
