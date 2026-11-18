@@ -1,6 +1,6 @@
 # Feature improvement tickets
 
-These mini tickets describe proposed improvements from user feedback. See the [current-state PRD](../Prd.md) for the existing behavior.
+These mini tickets describe proposed improvements from user feedback. See the [current-state PRD](Prd.md) for the existing behavior.
 
 ## 1. Reserve a seat for five minutes
 

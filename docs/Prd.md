@@ -1,6 +1,6 @@
 # Library Seat Finder product requirements and technical specification
 
-This document records the current Group 1 course prototype. Library visitors can check the latest estimated availability of monitored seats before walking to a table. Course operators can calibrate the sensors and diagnose the data path using Serial Monitor, the host API, and a simulator. See the [setup guide](docs/setup.md) for operating instructions and [future features](docs/future-features.md) for proposals from user feedback.
+This document records the current Group 1 course prototype. Library visitors can check the latest estimated availability of monitored seats before walking to a table. Course operators can calibrate the sensors and diagnose the data path using Serial Monitor, the host API, and a simulator. See the [setup guide](setup.md) for operating instructions and [future features](future-features.md) for proposals from user feedback.
 
 ## Product behavior
 

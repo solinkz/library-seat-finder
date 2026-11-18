@@ -45,7 +45,7 @@ This walkthrough starts with assembled sensors and a configured network. The rep
 | `WIFI_NO_MODULE` | Check the board selection and Arduino connectivity firmware. |
 | `WIFI_NOT_CONNECTED` | Verify that the expected open SSID is reachable. The sketch retries after ten seconds from the end of a failed attempt. |
 | `HOST_UNREACHABLE` or `HTTP_TIMEOUT` | Confirm the Pi is serving the page and state endpoint at the address and port compiled into the sketch. Check local network reachability from a device on the same network. |
-| HTTP 400 | Compare the printed JSON with the [API contract](../Prd.md#http-api). |
+| HTTP 400 | Compare the printed JSON with the [API contract](Prd.md#http-api). |
 | Host connected, seats Unknown | Check whether the Arduino or simulator is sending successfully, then inspect `seen` in `/api/state`. A successful browser poll can return stale or missing sensor data. |
 | Host unavailable | Start or restart the server and check the browser’s network connection. The page retries automatically. |
 | A seat stays Occupied or Available | Recheck that seat’s filtered readings, mounting, and thresholds using Serial Monitor. Confirm the simulator is stopped. |
