@@ -23,6 +23,8 @@ To use another port or a remote host, set `PORT` for the server and point the si
 
 ## Calibrate and connect the hardware
 
+See the [hardware record](hardware.md) for the parts and connections used in the team’s bench test.
+
 ### Prerequisites
 
 - An Arduino UNO R4 WiFi and two wired, mounted force-sensitive resistor circuits. The analog outputs go to A0 for Table 1 Seat 1 and A1 for Table 1 Seat 2.

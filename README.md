@@ -5,6 +5,7 @@ Group 1’s IFI7386 Interactive Systems course prototype shows library visitors 
 Two pressure sensors feed an Arduino UNO R4 WiFi. The Arduino classifies occupancy and posts readings to a Node.js host, typically a Raspberry Pi. The browser polls that host for the latest status.
 
 - [Setup and troubleshooting](docs/setup.md) covers the simulator, calibration, and the local hardware demo.
+- [Hardware record](docs/hardware.md) lists the bench-test parts, known connections, and observed results.
 - [Current-state PRD](docs/Prd.md) specifies the product behavior, architecture, firmware, and HTTP API.
 - [Code walkthrough](docs/code-walkthrough.md) follows a reading from the sensor to the browser.
 - [Technical history](docs/technical-history.md) traces the major changes in Git.
